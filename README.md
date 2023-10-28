@@ -1,6 +1,6 @@
 # PresenAI
 
-PresenAI that uses Hume AI to analyze the presenter's facial expressions and speech language during a video presentation. The AI provides real-time feedback on how to enhance delivery, engagement, and emotional connection with the audience.
+PresenAI uses Hume AI to analyze the presenter's facial expressions and speech language during a video presentation. The AI provides real-time feedback on how to enhance delivery, engagement, and emotional connection with the audience.
 
 ## Authors
 
