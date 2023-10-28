@@ -1,7 +1,16 @@
+require('dotenv').config({ path: '../.env' });
+
 const AWS = require('aws-sdk');
 const fs = require('fs');
 
-const s3 = new AWS.S3();
+const awsAccess = process.env.aws_access;
+const awsSecret = process.env.aws_secret;
+
+const s3 = new AWS.S3({
+    accessKeyId: awsAccess,
+    secretAccessKey: awsSecret,
+    region: 'us-west-2'
+});
 
 const bucketName = 'mp3-files-nodejs';
 const newFileNameKey ='file.mp3';
