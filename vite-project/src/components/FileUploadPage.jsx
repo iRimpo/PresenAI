@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './FileUploadPage.css';
 
 function FileUploadPage() {
-  const changeHandler = (event) => {
-    // Handle file input change here
-    const file = event.target.files[0];
-    // You can perform actions with the selected file here
-  };
-
-  const handleSubmission = () => {
-    // Handle submission here
-    // You can use the data collected from the file input in this function
+  const handleFileChange = (event) => {
+    const selectedFile = event.target.files[0];
+    // Handle the selected file here
   };
 
   return (
-    <div>
-      <input type="file" name="file" onChange={changeHandler} />
-      <div>
-        <button onClick={handleSubmission}>Submit</button>
-      </div>
+    <div className="file-upload-container">
+      <label htmlFor="fileInput" className="file-upload-label">
+        <i className="fas fa-cloud-upload-alt"></i>
+        <span>Drag & Drop or Click to Upload</span>
+      </label>
+      <input
+        type="file"
+        id="fileInput"
+        className="file-upload-input"
+        onChange={handleFileChange}
+      />
     </div>
   );
 }
